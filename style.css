@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1b1f3b, #0b0d1a);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  color: #ff9fbf;
+  animation: glow 2s infinite alternate;
+}
+
+.name {
+  font-size: 28px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+  animation: float 3s ease-in-out infinite;
+  text-shadow: 0 0 15px #ff5c8a;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: pop 0.8s ease;
+}
+
+.hidden { display: none; }
+
+.wish { font-size: 16px; line-height: 1.6; color: #fff; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tile {
+  background: #2a2f5a;
+  padding: 20px 0;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.matched {
+  background: #5cffb1;
+  color: black;
+  cursor: default;
+}
+
+.candle {
+  font-size: 80px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.Surprise {
+  font-size: 80px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+/* options */
+button.option {
+  font-size: 18px;
+  margin: 10px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff1493;
+  cursor: pointer;
+  width: 200px;
+}
+
+button.option:hover{
+  background:#ffe4f2;
+}
+
+/* Animations */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff5c8a; }
+  to { text-shadow: 0 0 25px #ff9fbf; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Falling stars */
+.star {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 12px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.photos img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.photos img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fall { to { transform: translateY(110vh); opacity: 0; } }
+
+/* Flip Gallery */
+.flip-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.flip-card {
+  width: 140px;
+  height: 140px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.flip-back {
+  background: linear-gradient(135deg, #ff5c8a, #ff9fbf);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  transform: rotateY(180deg);
+}
+
+/* Big Gift Flip */
+.big-flip {
+  width: 220px;
+  height: 280px;
+  margin: 30px auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.big-flip .flip-inner {
+  transition: transform 0.8s;
+}
+
+.big-flip.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.big-flip .flip-back img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+/* TEXT ON TOP WITHOUT MOVING IMAGE */
+.top-text {
+  position: absolute;
+  top: 8px;           /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: 0;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+  color: white;
+  backdrop-filter: 0;
+}

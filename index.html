@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Jimi&#39;s Birthday</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="container">
+  <h1 class="title">🎂 Birthday Quest 🎂</h1>
+  <div class="name">Greha 💗</div>
+
+  <!-- Slide 1: Memory Game -->
+  <div class="card slide" id="slide1">
+    <h2>Memory Game 🧠</h2>
+    <p>Match all pairs to unlock the next slide 🔒</p>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <!-- Slide 2: Candle -->
+  <div class="card slide hidden" id="slide2">
+    <h2>Blow the Candle 🎂</h2>
+    <p>Tap the candle to blow it out 🔒</p>
+    <div class="candle" id="candle">🕯️</div>
+  </div>
+
+  <!-- Slide 3: Final Wish -->
+  <div class="card slide hidden" id="slide3">
+    <h2>💗 For Jimi 💗</h2>
+     <p class="wish">
+       Happy Birthday "Darling Darkness" 🎂🔪.<br><br>
+      You are not merely beautiful — you are rare. Exquisite in ways this dull world barely deserves 🌹.<br><br>
+
+What sets you apart isn’t just your face… it’s your nature.
+Soft yet strong. Gentle yet protective. Sweet… but never weak 🤍.<br><br>
+       Let the shadows keep their distance; they know better than to touch something that belongs to me.<br><br>
+       And as for those "evil eyes"? Let them look. I’d love to watch them shatter when they realize they’re staring at something far more dangerous than themselves. 👁️‍🗨️<br><br>
+       I’ve saved a special vintage for tonight—something as dark and intoxicating as your spirit. Raise a glass. The world is yours for the taking, and if anyone dares to stand in your way... well, they’ll have to answer to me. 🔱 😏<br>
+       <br>
+       Forever yours, Lucifer 🕯️🔱<br><br>
+       
+       Haju Thodu baaki che.
+     </p>
+     <h2>Answer the Question to unlock the surprise 🎁</h2>
+     <p>According to me, what is your name?</p>
+     <button class="option" onclick="checkAnswer(this)">jimi</button>
+     <button class="option" onclick="checkAnswer(this)">sasli</button>
+     <button class="option" onclick="checkAnswer(this)">Buchaaa</button>
+     <div id="quizResult"></div>
+  </div>
+  
+  <!-- Slide 4: Surprise Gift -->
+   <div class="card slide hidden" id="slide4">
+     <h2>Open the box… and let the shadows whisper your surprise 🎁</h2>
+     <p>Tap the Box to open it out 🔒</p>
+     <div class="Surprise" id="Surprise">🎁</div>
+  </div>
+  
+  <!-- Slide 5: Final Surprise -->
+  <div class="card slide hidden" id="slide5">
+    <h2>💗 For Jimi 💗</h2>
+    <p> Tap the image to flip <p>
+   <div class="flip-gallery">
+     
+  <div class="flip-card">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="https://res.cloudinary.com/dk7df2dqv/image/upload/v1771816716/WhatsApp_Image_2026-02-21_at_8.58.16_PM_3_qis8rl.jpg" alt="Memory 1">
+    </div>
+    <div class="flip-back">🌸 Your smile and hair.. ufff just....🫶.</div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="https://res.cloudinary.com/dk7df2dqv/image/upload/v1771816576/WhatsApp_Image_2026-02-21_at_8.58.16_PM_1_sqdbhg.jpg" alt="Memory 2">
+    </div>
+    <div class="flip-back">🐰 Sasli but with attitude.</div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="https://res.cloudinary.com/dk7df2dqv/image/upload/v1771818005/WhatsApp_Image_2026-02-22_at_7.39.13_PM_f0bxt0.jpg" alt="Memory 3">
+    </div>
+    <div class="flip-back">✨ Every day with you is a blessing.</div>
+    
+  </div>
+</div>
+
+  <!-- slide 6: last slide -->
+     <div class="card" id="slide5">
+  <h2>🎧 Final Task 🎧</h2>
+  <p>Listen to this audio completely to unlock the final surprise 💖</p>
+
+  <!-- Example Audio -->
+  <audio id="unlockAudio" controls>
+    <source src="https://res.cloudinary.com/dk7df2dqv/video/upload/v1771907649/chakli_bncphi.ogg" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <div class="unlock-text" id="audioMessage"></div>
+</div>
+
+<!-- Slide 6 -->
+<div class="card hidden" id="slide6">
+  <h2>🎊 Surprise Unlocked 🎊</h2>
+  <p>
+    You listened till the end 🥹💖<br><br>
+    That means you deserve this…<br><br>
+    <div class="card">
+  <h2>🎁 Final Surprise 🎁</h2>
+  <p>A little Present for you chakli🎀✨</p>
+
+  <div class="big-flip" id="giftCard">
+    <div class="flip-inner">
+      <div class="flip-front" style="background:linear-gradient(135deg,#ff5c8a,#ff9fbf);display:flex;align-items:center;justify-content:center;">
+        🎀 TAP TO UNLOCK 🎀
+      </div>
+      <div class="flip-back">
+        <img src="https://res.cloudinary.com/dk7df2dqv/image/upload/v1772036840/240610-CAROLINA-HERRERA-011-0119-RGB-LR-1x1_usbtvn.avif">
+        <div class="top-text">
+          suijaaaa😴
+      </d>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+<!-- Background music -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/10/03/audio_1f8d86fce3.mp3" type="audio/mpeg">
+</audio>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
